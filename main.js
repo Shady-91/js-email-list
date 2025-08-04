@@ -25,11 +25,13 @@ axios.get(api_url_endpoint)
       })
 
 function genera10Email() {
-      const link = "https://flynn.boolean.careers/exercises/api/random/mail"
       const emailList = []
       for (let i = 1; i <= 10; i++) {
-            genera10Email.push(link[i]);
-            console.log(genera10Email);
-
+            axios.get(api_url_endpoint)
+                  .then(response => {
+                        const email = response.data.response;
+                        const li = document.createElement("li");
+                        li.textContent = email;
+                        emailListEl.appendChild(li);
+                  })
       }
-};

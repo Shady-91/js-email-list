@@ -15,5 +15,7 @@ function genera10Email() {
       const link = "https://flynn.boolean.careers/exercises/api/random/mail"
       const emailList = []
       for (let i = 1; i <= 10; i++)
+            genera10Email.push(genera10Email[i]) =>
+      console.log(genera10Email);
 
 }

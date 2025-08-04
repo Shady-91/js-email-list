@@ -9,9 +9,12 @@ console.log("Hello World");
 //Abbellire con CSS o Bootstrap
 //Inserire un bottone che al click faccia il fetch altre 10 mail(sostituendo le altre)
 
-const api_url_endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail'
+const api_url_endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail';
+const emailListEl = document.getElementById('lista-email');
+const generaBtn = document.getElementById('MyButton');
 
-const resultEl = document.getElementById('MyButton')
+generaBtn.addEventListener('click', genera10Email);
+
 
 console.log(api_url_endpoint);
 
@@ -25,7 +28,7 @@ function genera10Email() {
       const link = "https://flynn.boolean.careers/exercises/api/random/mail"
       const emailList = []
       for (let i = 1; i <= 10; i++) {
-            genera10Email.push(genera10Email[i])
+            genera10Email.push(link[i]);
             console.log(genera10Email);
 
       }

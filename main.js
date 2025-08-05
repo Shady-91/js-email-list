@@ -13,16 +13,15 @@ const api_url_endpoint = 'https://flynn.boolean.careers/exercises/api/random/mai
 const emailListEl = document.getElementById('lista-email');
 const generaBtn = document.getElementById('MyButton');
 
-generaBtn.addEventListener('click', genera10Email);
 
 
-console.log(api_url_endpoint);
 
 axios.get(api_url_endpoint)
       .then(response => {
             console.log(response);
 
       })
+console.log(api_url_endpoint);
 
 function genera10Email() {
       const emailList = []
@@ -33,5 +32,6 @@ function genera10Email() {
                         const li = document.createElement("li");
                         li.textContent = email;
                         emailListEl.appendChild(li);
-                  })
+                  });
       }
+}
